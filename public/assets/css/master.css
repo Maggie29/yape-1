@@ -1,0 +1,40 @@
+body{
+}
+.gray-soft{
+  color: #8f8f8f;
+}
+.gray-dark{
+  color: #212121;
+}
+.container-carousel{
+  width: 70%;
+  height: 500px;
+  top: 10%;
+  left: 15%;
+  position: fixed;
+}
+#slider{
+  height: 600px !important;
+}
+
+.text-carousel{
+  padding: 0px 20px;
+  text-align: center;
+}
+#reg-button{
+  top: 90%;
+  position: fixed;
+  left: 15%;
+  width: 70%;
+  background-color: #fbd43b;
+}
+.img-icon{
+  width: 50%;
+}
+.container-phone{
+  width: 70%;
+  top: 10%;
+  position: absolute;
+  left: 15%;
+  text-align: center;
+}
