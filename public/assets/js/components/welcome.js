@@ -1,29 +1,29 @@
 'use strict';
+$(document).ready(_ => {
+    $('.carousel').carousel();
+  });
 
-const Welcome = () =>{
-  const containerWelcome = $('<div class="container"></div>');
-  const containerCarousel = $('<div class="container-carousel"></div>');
-  const slider = $('<div class="carousel carousel-slider" id="slider"></div>');
-  const slide1 =$('<a class="carousel-item" href="#one!"></a>');
-    const img1 = $('<img src="assets/img/carousel/group-people.png" >');
-    const divText1=$('<div class="text-carousel"></div>');
-      const title1 =$('<h2 class="gray-dark">Gratis y Seguro</h2>');
-      const p1 = $('<p class="gray-soft">La transferencia es inmediata y gratuita de una cuenta a otra.</p>');
+$('.carousel.carousel-slider').carousel({fullWidth: true});
 
-  const button =$('<a class="waves-effect waves-light btn" id="reg-button">Registrarme</a>');
-divText1.append(title1);
-divText1.append(p1);
-slide1.append(img1);
-slide1.append(divText1);
+const Welcome = (update) =>{
+  const containerWelcome = $('<div class="container text-center"></div>');
+  const slider = $('<div class="carousel carousel-slider center"></div>');
+  const slide1 =$('<a class="carousel-item"><img src="assets/img/carousel/group-people.png" class="responsive-img"><h5 class="gray-dark">Gratis y Seguro</h5><p class="gray-soft">La transferencia es inmediata y gratuita de una cuenta a otra.</p></a>');
+  const slide2 =$('<a class="carousel-item"><img src="assets/img/carousel/happy-person.png" class="responsive-img"><h5 class="gray-dark">Sin numero de cuenta</h5><p class="gray-soft">Elige a quién pagar desde tu lista de contactos.</p></a>');
+  const slide3 =$('<a class="carousel-item"><img src="assets/img/carousel/icon-people.png" class="responsive-img"><h5 class="gray-dark">Paga a tus amigos</h5><p class="gray-soft">Paga a quien quieras dónde quieras, sin usar efectivo.</p></a>');
+
+  const regButton =$('<a class="waves-effect waves-light btn" id="reg-button">Registrarme</a>');
+
 slider.append(slide1);
-containerCarousel.append(slider);
-containerWelcome.append(containerCarousel);
-containerWelcome.append(button);
+slider.append(slide2);
+slider.append(slide3);
+containerWelcome.append(slider);
+containerWelcome.append(regButton);
 
-button.on('click', _ => {
-  state.screen = 'phonevalidation';
+regButton.on('click', _ => {
+  state.screen = 'Phonevalidation';
   update();
 });
 
 return containerWelcome;
-};
+}

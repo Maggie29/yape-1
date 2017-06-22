@@ -1,35 +1,34 @@
-body{
+*{
+  margin: 0;
+  padding: 0;
 }
+
 .gray-soft{
   color: #8f8f8f;
 }
 .gray-dark{
   color: #212121;
 }
-.container-carousel{
-  width: 70%;
-  height: 500px;
-  top: 10%;
-  left: 15%;
-  position: fixed;
+.num-purple{
+  color:#49233b;
 }
-#slider{
-  height: 600px !important;
+.container{
+  width:60% !important;
+}
+.carousel.carousel-slider{
+  height:600px !important;
+  top: 90px !important;
+}
+.carousel .carousel-item>img{
+  width: 45%;
 }
 
-.text-carousel{
-  padding: 0px 20px;
-  text-align: center;
-}
 #reg-button{
-  top: 90%;
-  position: fixed;
+  top: 70%;
+  position: absolute;
   left: 15%;
   width: 70%;
   background-color: #fbd43b;
-}
-.img-icon{
-  width: 50%;
 }
 .container-phone{
   width: 70%;
